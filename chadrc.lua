@@ -16,6 +16,12 @@ M.ui = {
     overriden_modules = nil,
   },
 
+  cmp = {
+    style = "atom",
+    icons = true,
+    selected_item_bg = "colored",
+  },
+
   hl_override = highlights.override,
   hl_add = highlights.add,
 }
