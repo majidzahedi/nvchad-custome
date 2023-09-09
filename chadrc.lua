@@ -21,6 +21,9 @@ M.ui = {
     icons = true,
     selected_item_bg = "colored",
   },
+  telescope = {
+    style = "borderless",
+  },
 
   hl_override = highlights.override,
   hl_add = highlights.add,

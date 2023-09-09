@@ -11,8 +11,8 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
-  -- cpp
-  b.formatting.clang_format,
+  b.diagnostics.cspell,
+  b.code_actions.cspell,
 }
 
 null_ls.setup {
