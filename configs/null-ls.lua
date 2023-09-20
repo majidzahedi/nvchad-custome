@@ -10,9 +10,6 @@ local sources = {
 
   -- Lua
   b.formatting.stylua,
-
-  b.diagnostics.cspell,
-  b.code_actions.cspell,
 }
 
 null_ls.setup {
@@ -28,7 +25,7 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format { bufnr = bufnr }
+          vim.lsp.buf.format { bufnr = bufnr, timeout_ms = 5000 }
         end,
       })
     end

@@ -1,12 +1,33 @@
 ---@type ChadrcConfig
 local M = {}
 
+local make_cool_stuff = {
+  [[    ███╗   ███╗ █████╗ ██╗  ██╗███████╗   ]],
+  [[    ████╗ ████║██╔══██╗██║ ██╔╝██╔════╝   ]],
+  [[    ██╔████╔██║███████║█████╔╝ █████╗     ]],
+  [[    ██║╚██╔╝██║██╔══██║██╔═██╗ ██╔══╝     ]],
+  [[    ██║ ╚═╝ ██║██║  ██║██║  ██╗███████╗   ]],
+  [[    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ]],
+  [[      ██████╗ ██████╗  ██████╗ ██╗        ]],
+  [[     ██╔════╝██╔═══██╗██╔═══██╗██║        ]],
+  [[     ██║     ██║   ██║██║   ██║██║        ]],
+  [[     ██║     ██║   ██║██║   ██║██║        ]],
+  [[     ╚██████╗╚██████╔╝╚██████╔╝███████╗   ]],
+  [[      ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝   ]],
+  [[███████╗████████╗██╗   ██╗███████╗███████╗]],
+  [[██╔════╝╚══██╔══╝██║   ██║██╔════╝██╔════╝]],
+  [[███████╗   ██║   ██║   ██║█████╗  █████╗  ]],
+  [[╚════██║   ██║   ██║   ██║██╔══╝  ██╔══╝  ]],
+  [[███████║   ██║   ╚██████╔╝██║     ██║     ]],
+  [[╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝     ]],
+}
+
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "one_light" },
+  theme = "ayu_dark",
+  theme_toggle = { "ayu_light", "ayu_dark" },
 
   statusline = {
     theme = "default", -- default/vscode/vscode_colored/minimal
@@ -27,6 +48,10 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+  nvdash = {
+    load_on_startup = true,
+    header = make_cool_stuff,
+  },
 }
 
 M.plugins = "custom.plugins"
