@@ -26,8 +26,8 @@ local make_cool_stuff = {
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "tokyonight",
-  theme_toggle = { "ayu_light", "tokyonight" },
+  theme = "catppuccin",
+  theme_toggle = { "ayu_light", "catppuccin" },
 
   statusline = {
     theme = "default", -- default/vscode/vscode_colored/minimal
