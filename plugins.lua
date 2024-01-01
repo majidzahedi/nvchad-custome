@@ -134,6 +134,12 @@ local plugins = {
     "mg979/vim-visual-multi",
     lazy = false,
   },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+    lazy = false,
+  },
 }
 
 return plugins
