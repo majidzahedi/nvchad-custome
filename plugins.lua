@@ -136,9 +136,20 @@ local plugins = {
   },
   {
     "pmizio/typescript-tools.nvim",
+    ft = "js,ts,jsx,tsx",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
     lazy = false,
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
   },
 }
 

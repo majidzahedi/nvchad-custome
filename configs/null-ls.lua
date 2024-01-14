@@ -9,6 +9,11 @@ local sources = {
   b.formatting.prettier,
   b.formatting.prismaFmt,
 
+  -- go
+  b.formatting.gofumpt,
+  b.formatting.goimports_reviser,
+  b.formatting.golines,
+
   -- Lua
   b.formatting.stylua,
 }

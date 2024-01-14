@@ -13,6 +13,7 @@ M.treesitter = {
     "markdown_inline",
     "dockerfile",
     "yaml",
+    "go",
   },
   indent = {
     enable = true,
@@ -39,6 +40,9 @@ M.mason = {
     -- devops stuff
     "docker-compose-language-service",
     "dockerfile-language-server",
+
+    -- go stuff
+    "gopls",
 
     -- spell checkers
     "cspell",
