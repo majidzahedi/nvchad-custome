@@ -22,7 +22,7 @@ lspconfig.gopls.setup {
 }
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tailwindcss", "emmet_ls", "prismals" }
+local servers = { "html", "cssls", "tailwindcss", "prismals", "emmet_language_server" }
 
 capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,

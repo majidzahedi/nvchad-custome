@@ -35,7 +35,7 @@ M.mason = {
     "typescript-language-server",
     "tailwindcss-language-server",
     "prettier",
-    "emmet-ls",
+    "emmet-language-server",
 
     -- devops stuff
     "docker-compose-language-service",
@@ -72,6 +72,16 @@ M.zenmode = {
       relativenumber = true,
     },
   },
+}
+
+M.cmd = {
+  opts = function()
+    local opts = require "plugins.configs.cmp"
+
+    table.insert(opts.sources, { name = "codeium" })
+
+    return opts
+  end,
 }
 
 M.fold = {
