@@ -7,3 +7,5 @@ autocmd("VimResized", {
 })
 
 vim.opt.relativenumber = true
+
+vim.opt_local.conceallevel = 2

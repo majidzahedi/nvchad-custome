@@ -163,8 +163,12 @@ local plugins = {
     opts = {
       workspaces = {
         {
-          name = "personal",
+          name = "general",
           path = "/home/majid/Documents/Obsidian Vault",
+        },
+        {
+          name = "personal",
+          path = "/home/majid/Documents/Personal Life",
         },
       },
 
