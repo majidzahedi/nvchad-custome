@@ -1,4 +1,5 @@
 local overrides = require "custom.configs.overrides"
+local opts = require "plugins.configs.telescope"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -174,6 +175,9 @@ local plugins = {
 
       -- see below for full list of options 👇
     },
+    init = function()
+      vim.opt.conceallevel = 2
+    end,
   },
 }
 

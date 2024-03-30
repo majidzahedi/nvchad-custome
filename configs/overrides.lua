@@ -43,6 +43,8 @@ M.mason = {
 
     -- go stuff
     "gopls",
+    "goimports_reviser",
+    "golines",
 
     -- spell checkers
     "cspell",
