@@ -25,4 +25,13 @@ M.typescript_tools = {
   },
 }
 
+M.telescope = {
+  plugin = true,
+
+  n = {
+    -- find
+    ["<leader>fw"] = { "<cmd> Telescope live_grep_args <CR>", "Live grep" },
+  },
+}
+
 return M

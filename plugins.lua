@@ -1,5 +1,4 @@
 local overrides = require "custom.configs.overrides"
-local opts = require "plugins.configs.telescope"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -38,6 +37,36 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        -- This will not install any breaking changes.
+        -- For major updates, this must be adjusted manually.
+        version = "^1.0.0",
+      },
+    },
+    cmd = "Telescope",
+    init = function()
+      require("core.utils").load_mappings "telescope"
+    end,
+    opts = function()
+      return require "plugins.configs.telescope"
+    end,
+    config = function(_, opts)
+      dofile(vim.g.base46_cache .. "telescope")
+      local telescope = require "telescope"
+      telescope.setup(opts)
+      telescope.load_extension "live_grep_args"
+
+      -- load extensions
+      for _, ext in ipairs(opts.extensions_list) do
+        telescope.load_extension(ext)
+      end
+    end,
   },
   {
     "max397574/better-escape.nvim",
